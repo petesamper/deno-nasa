@@ -21,7 +21,10 @@ app.use(async (ctx, next) => {
 	ctx.response.headers.set("X-Response-Time", `${delta}ms`);
 });
 
+// routes placed here to catch what we want to display.
+// anything that doesn't will be sent to static file middleware (endpoint).
 app.use(api.routes());
+app.use(api.allowedMethods());
 
 // endpoint
 app.use(async ctx => {
