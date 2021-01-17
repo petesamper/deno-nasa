@@ -1,1 +1,1 @@
-NASA mission control application built with Deno.
+NASA mission control web application.
